@@ -1,6 +1,8 @@
 const gridContainer = document.querySelector("#gridContainer");
 const clearButton = document.querySelector("#clear");
 let gridSize = 16;
+const colorButton = document.querySelector("#colorSelect")
+
 
 window.addEventListener("load", setDefault(16))
 
@@ -35,9 +37,13 @@ function fillGrid(gridSize){
         const gridPixel = document.createElement('div');
         gridPixel.classList = "gridPixel";
         gridPixel.style.backgroundColor = "white";
+        gridPixel.addEventListener('mouseover', function(event){
+            event.target.style.backgroundColor=colorButton.value;
+        })
         gridContainer.appendChild(gridPixel);
     }
 }
+
 
 newSize.addEventListener('input',function(){
     let gridSize = document.querySelector("#sizeRange").value;
@@ -46,3 +52,10 @@ newSize.addEventListener('input',function(){
     fillGrid(gridSize);
 
 })
+
+function eraseAll(){
+    let gridPixels = gridContainer.querySelectorAll('div');
+    gridPixels.forEach(gridPixels => gridPixels.style.backgroundColor = "white");
+}
+
+clearButton.addEventListener('click', eraseAll)
