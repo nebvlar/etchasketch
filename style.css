@@ -1,21 +1,14 @@
-#container{
+body{
+    font-family: 'Cabin Sketch', cursive;
+}
+#gridContainer{
     display: grid;
-    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
-    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
-    padding: 5px;
-    
+    border: 2px solid black;
+    max-width: 500px;
+    min-height: 500px;
+    max-height: 500px
+    margin: 2rem auto;
 }
-
-.grid{
-    border: 1px solid black;
-}
-#button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#grid-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.gridPixel{
+    border: 1px solid grey;
 }
