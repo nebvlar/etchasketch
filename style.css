@@ -6,9 +6,10 @@ body{
     border: 2px solid black;
     max-width: 500px;
     min-height: 500px;
-    max-height: 500px
+    max-height: 500px;
     margin: 2rem auto;
 }
+
 .gridPixel{
     border: 1px solid grey;
 }
