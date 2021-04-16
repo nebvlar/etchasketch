@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Etch-a-sketch</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id ="button">
-        <button id="clear">Clear        </button>
-    </div>
-    <div id="grid-container">
-    <div id="container"></div>
-    </div>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Etch a Sketch</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="title">
+            <h1 id="titleMain">Etch a Sketch</h1>
+        </div>
+
+        <div id="mainContainer">
+            <div id="controlContainer">
+                <div id="sizeContainer">
+                    <p id="sizeContainerLabel">Grid Size</p>
+                    <input type="range" min="1" max="64" value="16" id="sizeRange" class="slider">
+                    <label id="sizeLabel" for="gridSize"></label>
+                    <button id="clear"></button>
+                </div>
+            </div>
+            <div id="gridWrapper">
+                <div id="gridContainer">
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
